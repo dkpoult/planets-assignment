@@ -16,6 +16,7 @@ Layout:
 
 Future changes:
  - The most obvious change would be adding a layer of authentication to the system, especially for the CRUD operations.
+ - Enriching the API calls with more information and making new API endpoints available.
  - Setting up separate environments for testing/staging/production as the code grew.
  - Having an automated testing and coverage analysis pipeline linked to GitHub for deploys.
  - Generating more unit tests for edge cases.
