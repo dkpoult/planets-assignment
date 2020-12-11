@@ -1,0 +1,28 @@
+N.B. I use the term "we" and "our" frequently throughout my comments and writing. I only use it out of habit from academic
+    writing where we're encouraged to make use of the "Royal We", and want to clarify that I did not receive any help or
+    code from anyone else.
+
+Design:
+ - The CRUD implementation was straightforward and just made available the essential operations.
+ - The API for routing was also only the single operation for pathfinding, with no fancy extras.
+ - I made the choice to make routes utilise the actual database IDs of planets on the backend, rather than the nodes,
+    as it felt more robust to future changes (for example, having to rename a node for some reason).
+ - API requests for routes and planets used the given Route ID and Planet Node respectively, as they don't depend on the DB
+    ID value and should be more intuitive to find.
+
+Layout:
+ - The code is segmented into various packages, for the API, database, and shared utilities respectively.
+ - In the future the API would have subpackages as well, to avoid a huge clutter if the code kept growing.
+
+Future changes:
+ - The most obvious change would be adding a layer of authentication to the system, especially for the CRUD operations.
+ - Setting up separate environments for testing/staging/production as the code grew.
+ - Having an automated testing and coverage analysis pipeline linked to GitHub for deploys.
+ - Generating more unit tests for edge cases.
+
+Testing:
+ - The final coverage was 94% (of lines), using the IntelliJ tracker.
+ - For manual testing I made use of the Postman application.
+ - The automated testing made use of a mixture of unit and functional tests.
+ - I assumed that the provided dataset could be used as a test set as well, and so several of the automated
+    tests rely on the entries for correctness. (This could be resolved by just creating a new test set otherwise).
